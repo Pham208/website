@@ -1,0 +1,26 @@
+* {padding: 0; margin: 0; font-family: "Audiowide", sans-serif; color: whitesmoke; margin: auto;}
+body {background-color: rgb(45, 45, 45); }
+/* top div */
+.top-div {border-bottom: 1px solid whitesmoke;}
+.Top-div2 {margin: auto; text-align: center; width: 60ch; height: 5ch;}
+.span-home-logo1 {float: left; }
+.top-div3 {top: 38%; position: relative;}
+
+/* Button top div */
+.button-top-span {padding: 15px;}
+.button-top-span-login {padding: 30px;}
+.button-top-div {text-decoration: none; border: 1px solid rgb(150, 150, 150); border-radius: 5px; padding: 10px;}
+
+.button-top-div:hover {background-color: grey; transition: 0.2s;}
+
+/* starting form signup */
+h1 {padding-bottom: 10px; text-align: center;}
+.username, .password, .email {background-color: transparent; outline: none; border: 1px solid transparent; border-bottom: 1px solid whitesmoke; padding: 3px 5px 5px 5px;}
+.input_div {border: 1px solid whitesmoke; border-radius: 5px; padding: 10px; width: 30ch; }
+.wapper {padding: 5px; text-align: center;}
+.input__field {padding: 2.5px; }
+.username::placeholder, .password::placeholder, .email::placeholder {color: rgb(176, 176, 176);}
+
+.div-sumbit-form-input {padding-top: 10px;}
+.submit-form-input {padding: 5px 30px 5px 30px; color: black; border: 2px solid rgb(115, 115, 115); border-radius: 3px; background-color: rgb(104, 104, 104);}
+.submit-form-input:hover {background-color: rgb(98, 165, 98); transition: 0.2s;}
