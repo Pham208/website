@@ -1,26 +1,182 @@
-* {padding: 0; margin: 0; font-family: "Audiowide", sans-serif; color: whitesmoke; margin: auto;}
-body {background-color: rgb(45, 45, 45); }
-/* top div */
-.top-div {border-bottom: 1px solid whitesmoke;}
-.Top-div2 {margin: auto; text-align: center; width: 60ch; height: 5ch;}
-.span-home-logo1 {float: left; }
-.top-div3 {top: 38%; position: relative;}
-
-/* Button top div */
-.button-top-span {padding: 15px;}
-.button-top-span-login {padding: 30px;}
-.button-top-div {text-decoration: none; border: 1px solid rgb(150, 150, 150); border-radius: 5px; padding: 10px;}
-
-.button-top-div:hover {background-color: grey; transition: 0.2s;}
-
-/* starting form signup */
-h1 {padding-bottom: 10px; text-align: center;}
-.username, .password, .email {background-color: transparent; outline: none; border: 1px solid transparent; border-bottom: 1px solid whitesmoke; padding: 3px 5px 5px 5px;}
-.input_div {border: 1px solid whitesmoke; border-radius: 5px; padding: 10px; width: 30ch; }
-.wapper {padding: 5px; text-align: center;}
-.input__field {padding: 2.5px; }
-.username::placeholder, .password::placeholder, .email::placeholder {color: rgb(176, 176, 176);}
-
-.div-sumbit-form-input {padding-top: 10px;}
-.submit-form-input {padding: 5px 30px 5px 30px; color: black; border: 2px solid rgb(115, 115, 115); border-radius: 3px; background-color: rgb(104, 104, 104);}
-.submit-form-input:hover {background-color: rgb(98, 165, 98); transition: 0.2s;}
+* {
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-color: #2d2d2d;
+}
+.main {
+    border-bottom: 1px solid whitesmoke;
+    text-align: center;
+}
+.link-social {
+    color: white;
+    font-size: 25px;
+}
+.link-social:hover {
+    color: grey;
+    font-size: 30px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.center-border {
+    border-right: 1px solid whitesmoke;
+    height: auto;
+}
+.signup {
+    padding-top: 25px;
+    color: rgb(232, 230, 230);
+    text-align: center;
+    font-size: 40px;
+}
+.signup-form {
+    text-align: center;
+    margin: auto;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    padding: 20px;
+    width: 69%;
+    height: auto;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+#renew {
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(122, 122, 122);
+    font-size: 15px;
+}
+#renew:hover {
+    transition: 0.2s;
+    background-color: rgb(58, 58, 58);
+}
+input {
+    outline: none;
+    border-radius: 3px;
+    padding-inline: 5px;
+    background-color: transparent;
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(18, 17, 17, 0.615), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input-in, .input-in2, .input-in3, .input-in4, .input-in5 {
+    border: none;
+    border-bottom: 1px solid rgb(58, 58, 58);
+}
+label {
+    color: whitesmoke;
+    font: 30px;
+}
+.signup-name {
+    padding-bottom: 7px;
+    font-size: 19px;
+}
+.pass {
+    padding-bottom: 7px;
+    font-size: 19px;
+}
+.submit {
+    color: whitesmoke;
+    outline: none;
+    padding-inline: 5px;
+    border: 1px solid rgba(162, 161, 161, 0.407);
+    border-radius: 2px;
+    font-size: 20px;
+    width: 5cm;
+    max-width: 5.5cm;
+}
+.submit:hover {
+    background-color: rgba(183, 169, 169, 0.084);
+    transition: 0.3s;
+}
+::placeholder {
+    color: rgb(225, 225, 225);
+}
+.have-acc {
+    font-size: 20px;
+    color: whitesmoke;
+}
+.goto-login {
+    font-size: 19px;
+    color: grey;
+}
+.goto-login:hover {
+    color: rgb(148, 207, 221);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+/* load page if the page load too slow */
+#out-loader {
+    display: block;
+    background-color: #2d2d2d;
+}
+#loader {
+    background-color: #2d2d2d;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+#myDiv {
+    display: none;
+    text-align: center;
+}

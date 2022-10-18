@@ -3,54 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/web/css/signup&login css/signup.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <link rel="shortcut icon" href="/web/vi-ai-cung-can-desktop-an-tuong-moi-anh-em-tai-bo-hinh-nen-gearvn-cuc-ngau_6204d737987c1-1536x864.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/Logoweb.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/boost/icon-make/iconpass1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng kí tài khoản</title>
+    <!-- Link if css/js/icon   cannot get -->
+    <link rel="shortcut icon" href="/Logoweb.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/signup-login-css/signup.css">
+    <!-- END -->
+    <title>Đăng ký tài khoản</title>
+    <style>
+        @font-face {
+            font-family: Comic;
+            src: url(/css/SVN-Comic\ Sans\ MS.ttf);
+        }
+        label, h1, a, h3, input {
+            font-family: Comic;
+        }
+    </style>
 </head>
-<body>
-    <div class="top-div">
-        <div class="Top-div2">
-            <!-- <div class="span-home-logo1">
-                <a class="home-logo1" href="/web/html/info.html"><img class="logo1" src="/web/vi-ai-cung-can-desktop-an-tuong-moi-anh-em-tai-bo-hinh-nen-gearvn-cuc-ngau_6204d737987c1-1536x864.jpeg" width="170px"></a>
-            </div> -->
-            <div class="top-div3">
-                <span class="button-top-span">
-                    <a class="button-top-div" href="/web/html/info.html">Trang chủ</a>
-                </span>
-                <span class="button-top-span-login">
-                    <a class="button-top-div" href="login.html">Đăng nhập</a>
-                </span>
-                <span class="button-top-span-login">
-                    <a class="button-top-div" href="https://discord.gg/gDPCqd3RDn">Discord</a>
-                </span>
+<body onload="myFunction()" style="margin:0;">
+    <div id="out-loader">
+        <div id="loader"></div>
+        <a style="opacity: 0; position: absolute;">Load font</a>
+    </div> 
+    <div class="MAIN_FORM" id="myDiv" class="animate-bottom">
+        <div class="main">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <a class="link-social" href="/html/home.html">Trang chủ</a>
+                    </div>
+                    <div class="center-border"></div>
+                    <div class="col-4">
+                        <a class="link-social" href="/html/chat.html">Khu chat</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="wapper">
-        <div class="wapper-heading">
-            <h1>Đăng ký</h1>
+        <h3 class="signup">Đăng ký</h3>
+        <div class="signup-form">
+            <form action="/html/error.html" method="POST">
+                <div class="signup-name">
+                    <label for="name">Tên đăng ký:</label>&nbsp;
+                    <input id="input-in" type="text" placeholder="Tên" required autocomplete="off" title="Tên đăng kí">
+                </div>
+                <div class="pass">
+                    <label for="pass">Mật khẩu:</label>&nbsp;&nbsp;&nbsp;
+                    <input type="password" name="password" id="input-in2" placeholder="Nhập mật khẩu"/>
+                    <span class="show-btn"><i class="fas fa-eye"></i></span>
+                </div>
+                <div class="pass">
+                    <label for="email">Email:</label>&emsp;&emsp;&ensp;&nbsp;
+                    <input type="email" name="email" id="input-in4" placeholder="Email" autocomplete="off" title="Email">
+                </div>
+                <div class="pass">
+                    <label for="contact-number">Số điện thoại:</label>
+                    <input type="number" name="contact-number" id="input-in5" placeholder="Số điện thoại" autocomplete="off" title="Số điện thoại">
+                </div>
+                <div class="submit-signup">
+                    <input class="submit" type="submit" value="Đăng ký">
+                </div>
+            </form>
+            <a class="have-acc">Đã có tài khoản rồi sao?</a><br>
+            <a class="goto-login" href="/html/signup&login/login.html">Ấn vào đây để đăng nhập</a>
         </div>
-        <form class="input_div" action="/web/html/info.html">
-            <div class="input__field">
-                <input class="username" type="text" name="Username" id="Username" placeholder="Tên đăng kí" autocomplete="off" required>
-            </div>
-            <div class="input__field">
-                <input class="password" type="password" name="password" id="password" placeholder="Mật khẩu" autocomplete="off" required>
-            </div>
-            <div class="input__field">
-                <input class="password" type="password" name="password" id="password" placeholder="Nhập lại mật khẩu" autocomplete="off" required>
-            </div>
-            <div class="input__field">
-                <input class="email" type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
-            </div>
-            <div class="div-sumbit-form-input">
-                <input class="submit-form-input" type="submit" value="Đăng kí" placeholder="Đăng kí">
-            </div>
-        </form>
     </div>
-    <script src="/web/js/login&signup js/signup.js"></script>
+    <script>
+        // var
+        var myVar;
+        // const
+        const passField = document.querySelector("input");
+        const showBtn = document.querySelector("span i");
+        const form = document.querySelector("form");
+        // page load
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+        function myFunction() {
+            myVar = setTimeout(showPage, 500);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+        // watch pass
+        showBtn.onclick = (()=>{
+        if(passField.type === "password"){
+          passField.type = "text";
+          showBtn.classList.add("hide-btn");
+        }else{
+          passField.type = "password";
+          showBtn.classList.remove("hide-btn");
+        }
+      });
+    </script>
+    <!-- css if main cannot get -->
+    <link rel="stylesheet" href="/css/boost/grid.css">
+    <link rel="stylesheet" href="/css/boost/eyes.css">
 </body>
 </html>
