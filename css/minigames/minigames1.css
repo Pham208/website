@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: rgb(45, 45, 45);
+    text-align: center;
+    padding-inline: 15px;
+}
+h1, h2, h3, h4, h5, a {
+    color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    width: 90%;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+p {
+    color: rgb(45, 45, 45);
+    padding: 5px;
+}
+.bottomleft {
+    transition: transform .4s;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+}
+.bottomleft:hover {
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+}
+.home {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    color: whitesmoke;
+    animation: font 2s infinite;
+    -webkit-animation: font 2s infinite;
+}
