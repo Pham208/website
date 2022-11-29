@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-4">
-                        <a class="link-social" href="index.html">Trang chủ</a>
+                        <a class="link-social" href="/index.html">Trang chủ</a>
                     </div>
                     <div class="center-border"></div>
                     <div class="col-4">
@@ -53,7 +53,7 @@
         <a style="text-align: center; color: red; font-size: 50px;">NOT WORKING</a>
 
     <script>
-            var myVar;
+        var myVar;
         function myFunction() {
         myVar = setTimeout(showPage, 500);
         }
@@ -63,5 +63,24 @@
         }
     </script>
     </div>
+    <div id="contextMenu" class="context-menu" style="display:none">
+        <ul>
+            <li class="menu"><a class="link1" href="/index.html"><i class="fa-solid fa-house-user">&nbsp;</i>Home</a></li>
+            <li class="menu"><a class="link2" href="https://discord.com/invite/nfTUEWrEe6" target="_blank"><i class="fa-brands fa-discord">&nbsp;</i>Discord</a></li>
+            <li class="menu"><a class="link3" href="#"><i class="fa-regular fa-circle-xmark">&nbsp;</i>Chưa có</a></li>
+            <li class="menu"><a class="link4" href="#"><i class="fa-regular fa-circle-xmark">&nbsp;</i>Chưa có</a></li>
+        </ul>
+    </div>
+    <script>
+        // COPY IP BUTTON
+        document.getElementById("btn1").onclick = function () {
+            document.getElementById("coppyed").style.display = 'none';
+        };
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("coppyed").style.display = 'block';
+        }; 
+    </script>
+    <link rel="stylesheet" href="/css/menu/menu.css">
+    <script src="/js/font1.js"></script>
 </body>
 </html>

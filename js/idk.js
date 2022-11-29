@@ -1,33 +1,47 @@
-// string
-var myVar;
 // copy ip address server
-function copy(text) {
-    document.body.insertAdjacentHTML("beforeend", "<div id=\"copy\" contenteditable>" + text + "</div>")
-    document.getElementById("copy").focus();
-    document.execCommand("selectAll");
-    document.execCommand("copy");
-    document.getElementById("copy").remove();
-    console.log('copy thành công');
+function IPSever() {
+    var copyText = document.getElementById("ServerIP");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);    // mobile device
+    // copyText inside text field
+    navigator.clipboard.writeText(copyText.value);
+
+    var tooltip = document.getElementById("Tooltip");
+    // tooltip.innerHTML = "Copied: " + copyText.value;  ---- default tooltip value
+    tooltip.innerHTML = "Copy thành công:" + copyText.value;
+}
+function outFunc() {
+    var tooltip = document.getElementById("Tooltip");
+    tooltip.innerHTML = "Copy to clipboard";
 }
 // load page
+var loadpage;
 function myFunction() {
-    myVar = setTimeout(showPage, 1500);
+    loadpage = setTimeout(showPage, 1500);
 }
 function showPage() {
     document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
+    document.getElementById("in-loader").style.display = "block";
 }
-// clock
-setInterval(myTimer, 0);
-function myTimer() {
-    const d = new Date();
-    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+
+// MENU RIGHTCLICK
+document.onclick = hideMenu;
+document.oncontextmenu = rightClick;
+function hideMenu() {
+    document.getElementById("contextMenu").style.display = "none"
 }
-// DISABLE RIGHTCLICK, CTRL + U
-document.onkeydown = function (e) {
-    if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117))
-        return false;
-};
-document.addEventListener("contextmenu", function (e) {
+function rightClick(e) {
     e.preventDefault();
-}, false);
+    if (
+        document.getElementById("contextMenu").style.display == "block"
+    )
+        hideMenu();
+    else {
+        var menu = document.getElementById("contextMenu")
+        menu.style.display = 'block';
+        menu.style.left = e.pageX + "px";
+        menu.style.top = e.pageY + "px";
+    }
+}
+
+
